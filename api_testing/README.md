@@ -15,11 +15,10 @@
 * [Phase 2 - Intermediate API Testing](#phase-2---intermediate-api-testing)
 * [Phase 3 - API Automation](#phase-3---api-automation)
 * [Phase 4 - Advanced API Testing](#phase-4---advanced-api-testing)
+* [Real World API Testing Case Study](#-real-world-api-testing-case-study)
 * [Interview Preparation](#-interview-preparation)
 * [Best Resources](#-best-resources)
-* [Analysis of Internet Resources](#-analysis-of-internet-resources)
-* [Recommended Tech Stack](#-recommended-tech-stack)
-* [Best Public APIs for Practice](#-best-public-apis-for-practice)
+* [Recommended Projects](#-recommended-projects)
 * [Common Mistakes Beginners Make](#-common-mistakes-beginners-make)
 * [Final Advice](#-final-advice)
 
@@ -29,20 +28,22 @@
 
 API Testing is one of the most important skills for modern QA Engineers and Automation Testers.
 
-Most modern applications are built using:
+Modern applications are heavily dependent on:
 
 * REST APIs
 * Microservices
 * Distributed Systems
-* Cloud-native architectures
+* Event-driven architecture
+* Cloud-native systems
 
-Because of this, API Testing has become a mandatory skill for:
+API Testing validates:
 
-* QA Engineers
-* SDETs
-* Automation Engineers
-* Backend Testers
-* Performance Testers
+* backend logic
+* integrations
+* authentication
+* performance
+* data consistency
+* system reliability
 
 ---
 
@@ -53,30 +54,30 @@ API Testing helps validate:
 * Business logic
 * Backend functionality
 * Integrations
-* Authentication
 * Security
+* Authentication
 * Data correctness
-* System reliability
+* Scalability
 
 API Testing is:
 
 * Faster than UI testing
-* More stable than UI automation
+* More stable
 * Easier to automate
-* More suitable for CI/CD pipelines
+* CI/CD friendly
 
 ---
 
 # 👨‍💻 Who Should Follow This Roadmap
 
-This roadmap is designed for:
+This roadmap is for:
 
-* Beginners with zero API knowledge
-* Manual Testers
-* Automation Testers
-* QA Engineers
+* Beginners
+* Manual testers
+* QA engineers
+* Automation testers
 * SDET aspirants
-* Developers wanting testing knowledge
+* Backend QA engineers
 
 ---
 
@@ -99,7 +100,7 @@ SQL Validation
       ↓
 Authentication
       ↓
-Advanced API Concepts
+REST API Concepts
       ↓
 Programming Language
       ↓
@@ -122,20 +123,36 @@ Advanced API Testing
 
 ## Topics to Learn
 
-* What is Backend?
-* What is Frontend?
+* Frontend vs Backend
 * Client-Server Architecture
 * Monolith vs Microservices
 * Request-Response Lifecycle
-* API Communication
+* APIs and Integrations
 
-## Goal
+---
 
-Understand:
+## 📚 Resources
 
-* how frontend talks to backend
-* why APIs exist
-* how data flows in applications
+### Beginner Friendly
+
+* https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
+* https://roadmap.sh/backend
+* https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces
+
+### Videos
+
+* https://www.youtube.com/watch?v=7_LPdttKXPc
+* https://www.youtube.com/watch?v=V3ZPPPKEipA
+
+---
+
+## 🎯 Goal
+
+Student should understand:
+
+* how browser communicates with server
+* how frontend consumes APIs
+* how backend returns data
 
 ---
 
@@ -156,21 +173,32 @@ Understand:
 * HTTPS
 * SSL/TLS
 
-### URL Structure
+---
 
-Example:
+## 📚 Resources
+
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+* https://www.cloudflare.com/learning/ddos/glossary/hypertext-transfer-protocol-http/
+* https://www.cloudflare.com/learning/network-layer/what-is-a-computer-port/
+* https://www.geeksforgeeks.org/tcp-ip-model/
+
+---
+
+## Practice
+
+Understand this URL:
 
 ```text
 https://api.example.com:443/users?id=10
 ```
 
-Understand:
+Breakdown:
 
-* protocol
-* domain
-* port
-* endpoint
-* query parameters
+* protocol → https
+* domain → api.example.com
+* port → 443
+* endpoint → /users
+* query param → id=10
 
 ---
 
@@ -178,15 +206,25 @@ Understand:
 
 This is the FOUNDATION of API Testing.
 
+---
+
 ## HTTP Methods
 
 | Method | Purpose                |
 | ------ | ---------------------- |
 | GET    | Retrieve Data          |
-| POST   | Create Data            |
+| POST   | Create Resource        |
 | PUT    | Update Entire Resource |
 | PATCH  | Partial Update         |
-| DELETE | Remove Resource        |
+| DELETE | Delete Resource        |
+
+---
+
+## 📚 Resources
+
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+* https://restfulapi.net/http-methods/
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
 ---
 
@@ -214,9 +252,9 @@ This is the FOUNDATION of API Testing.
 
 ---
 
-## HTTP Headers
+## Headers
 
-Important headers:
+Important Headers:
 
 * Content-Type
 * Authorization
@@ -225,9 +263,17 @@ Important headers:
 
 ---
 
+## 📚 Learn Headers
+
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+
+---
+
 # 4️⃣ JSON Mastery
 
-API Testing revolves around JSON.
+JSON is the most important data format in API Testing.
+
+---
 
 ## Topics
 
@@ -237,14 +283,20 @@ API Testing revolves around JSON.
 * Data Types
 * Parsing JSON
 
-## Practice
+---
 
-Learn how to:
+## 📚 Resources
 
-* read JSON
-* validate JSON
-* extract fields
-* compare responses
+* https://www.json.org/json-en.html
+* https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+* https://jsonformatter.org/json-parser
+
+---
+
+## Practice APIs
+
+* https://jsonplaceholder.typicode.com/
+* https://reqres.in/
 
 ---
 
@@ -254,32 +306,50 @@ Learn how to:
 
 # 5️⃣ Introduction to API Testing
 
+---
+
 ## Learn
 
 * What is API Testing?
-* Why API Testing matters
-* UI Testing vs API Testing
+* UI vs API Testing
 * Shift-left testing
+* API lifecycle
+
+---
+
+## 📚 Resources
+
+* https://www.postman.com/api-platform/api-testing/
+* https://www.ibm.com/think/topics/api-testing
 
 ---
 
 # 6️⃣ Types of API Testing
 
-| Type                | Description                    |
-| ------------------- | ------------------------------ |
-| Functional Testing  | Validating functionality       |
-| Integration Testing | Service interaction testing    |
-| Regression Testing  | Ensuring no new bugs           |
-| Smoke Testing       | Basic API health checks        |
-| Contract Testing    | API schema validation          |
-| Security Testing    | Authentication & authorization |
-| Performance Testing | API performance validation     |
+| Type                | Description               |
+| ------------------- | ------------------------- |
+| Functional Testing  | Feature validation        |
+| Integration Testing | Service communication     |
+| Regression Testing  | No new failures           |
+| Smoke Testing       | Basic health checks       |
+| Security Testing    | Authentication validation |
+| Contract Testing    | Schema validation         |
+| Performance Testing | Response speed validation |
+
+---
+
+## 📚 Resources
+
+* https://www.guru99.com/api-testing.html
+* https://www.browserstack.com/guide/api-testing-tutorial
 
 ---
 
 # 7️⃣ Postman (Core Tool)
 
 Postman is the best beginner tool.
+
+---
 
 ## Topics to Learn
 
@@ -300,48 +370,58 @@ Postman is the best beginner tool.
 
 * Basic Auth
 * Bearer Token
+* OAuth2
 * API Keys
-* OAuth2 Basics
 
 ### Assertions
 
 * Status code validation
-* Header validation
 * JSON validation
+* Header validation
 
 ### Scripting
-
-Learn:
 
 ```javascript
 pm.response.json()
 pm.expect()
 ```
 
-### Advanced Features
+---
 
-* Collection Runner
-* Newman
-* API Chaining
-* Dynamic Variables
+## 📚 Resources
+
+### Official Docs
+
+* https://learning.postman.com/
+
+### Best GitHub Repositories
+
+* https://github.com/vdespa/automation-with-postman-course
+* https://github.com/MuhammadRaheelNaseem/Learn-Postman-API-For-Testing
+
+### YouTube
+
+* https://www.youtube.com/watch?v=VywxIQ2ZXw4
 
 ---
 
 # 8️⃣ API Test Case Design
 
+---
+
 ## Learn
 
 ### Positive Testing
 
-Valid input scenarios
+Valid inputs
 
 ### Negative Testing
 
-Invalid input scenarios
+Invalid inputs
 
 ### Boundary Testing
 
-Edge-case validations
+Edge cases
 
 ### CRUD Validation
 
@@ -352,7 +432,18 @@ Edge-case validations
 
 ---
 
+## 📚 Resources
+
+* https://www.softwaretestinghelp.com/api-testing-tutorial/
+* https://www.guru99.com/testing-rest-api-manually.html
+
+---
+
 # 9️⃣ Database Validation
+
+APIs usually interact with databases.
+
+---
 
 ## Learn SQL Basics
 
@@ -366,12 +457,13 @@ GROUP BY
 ORDER BY
 ```
 
-## Goal
+---
 
-Validate:
+## 📚 Resources
 
-* API response
-* Database data consistency
+* https://www.w3schools.com/sql/
+* https://mode.com/sql-tutorial/
+* https://sqlbolt.com/
 
 ---
 
@@ -381,6 +473,8 @@ Validate:
 
 # 🔟 REST API Deep Dive
 
+---
+
 ## Topics
 
 * REST Principles
@@ -388,33 +482,37 @@ Validate:
 * Idempotency
 * Resource Modeling
 
-## Important Concepts
+---
 
-### PUT vs PATCH
+## 📚 Resources
 
-| PUT         | PATCH          |
-| ----------- | -------------- |
-| Full Update | Partial Update |
+* https://restfulapi.net/
+* https://restfulapi.net/rest-architectural-constraints/
 
 ---
 
-# 1️⃣1️⃣ API Documentation
+# 1️⃣1️⃣ Swagger/OpenAPI
+
+---
 
 ## Learn
 
-* Swagger/OpenAPI
+* Swagger
 * API Contracts
 * Request/Response Schema
 
-## Goal
+---
 
-Learn how to read API documentation professionally.
+## 📚 Resources
+
+* https://swagger.io/docs/
+* https://editor.swagger.io/
 
 ---
 
 # 1️⃣2️⃣ Authentication & Authorization
 
-Very important interview topic.
+---
 
 ## Topics
 
@@ -422,30 +520,41 @@ Very important interview topic.
 * OAuth2
 * Access Tokens
 * Refresh Tokens
-* Session Tokens
+
+---
+
+## 📚 Resources
+
+* https://jwt.io/introduction
+* https://oauth.net/2/
+* https://auth0.com/docs/secure/tokens/json-web-tokens
 
 ---
 
 # 1️⃣3️⃣ Advanced Postman
 
+---
+
 ## Topics
 
 * Pre-request Scripts
 * Dynamic Variables
-* Environment Management
+* Chaining APIs
 * Data-driven Testing
 * Mock Servers
-* API Monitoring
+
+---
+
+## 📚 Resources
+
+* https://learning.postman.com/docs/tests-and-scripts/write-scripts/test-scripts/
+* https://learning.postman.com/docs/collections/running-collections/intro-to-collection-runs/
 
 ---
 
 # 1️⃣4️⃣ API Debugging
 
-## Learn
-
-* Logs
-* Error Responses
-* Stack Traces
+---
 
 ## Tools
 
@@ -456,16 +565,18 @@ Very important interview topic.
 
 ---
 
+## 📚 Resources
+
+* https://developer.chrome.com/docs/devtools/network/
+* https://www.charlesproxy.com/documentation/
+
+---
+
 # Phase 3 - API Automation
 
 ---
 
 # 1️⃣5️⃣ Learn Programming Basics
-
-Before API Automation:
-learn programming properly.
-
-## Recommended Languages
 
 Choose ONE:
 
@@ -475,78 +586,80 @@ Choose ONE:
 
 ---
 
-## Topics to Learn
+## 📚 Java Resources
 
-* Variables
-* Loops
-* Functions
-* OOP Concepts
-* Collections
-* Exception Handling
-* File Handling
+* https://www.w3schools.com/java/
+* https://www.geeksforgeeks.org/java/
 
 ---
 
-# 1️⃣6️⃣ API Automation Framework Concepts
+## 📚 Python Resources
 
-## Learn
-
-* Framework Architecture
-* Assertions
-* Reporting
-* Logging
-* Config Management
-* Reusability
+* https://www.w3schools.com/python/
+* https://realpython.com/
 
 ---
 
-# 1️⃣7️⃣ REST Assured (Java Path)
+## 📚 JavaScript Resources
 
-If choosing Java.
-
-## Topics
-
-* GET/POST/PUT/DELETE
-* Assertions
-* Authentication
-* Serialization
-* Deserialization
-* JSON Schema Validation
+* https://javascript.info/
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 ---
 
-# 1️⃣8️⃣ Python API Automation
+# 1️⃣6️⃣ REST Assured (Java)
 
-If choosing Python.
+---
+
+## 📚 Resources
+
+* https://rest-assured.io/
+* https://www.baeldung.com/rest-assured-tutorial
+
+---
+
+# 1️⃣7️⃣ Python API Automation
+
+---
 
 ## Libraries
 
 * requests
 * pytest
 
+---
+
+## 📚 Resources
+
+* https://docs.pytest.org/
+* https://requests.readthedocs.io/en/latest/
+
+---
+
+# 1️⃣8️⃣ Framework Design
+
+---
+
 ## Learn
 
-* API Requests
-* Assertions
-* Fixtures
-* Parametrization
-
----
-
-# 1️⃣9️⃣ Framework Design
-
-## Important Components
-
+* Reusable Framework Design
 * Base Classes
 * Utilities
-* Environment Handling
 * Reporting
 * Logging
-* Test Data Management
 
 ---
 
-# 2️⃣0️⃣ CI/CD Integration
+## 📚 Resources
+
+* https://testautomationu.applitools.com/
+* https://martinfowler.com/articles/practical-test-pyramid.html
+
+---
+
+# 1️⃣9️⃣ CI/CD Integration
+
+---
 
 ## Tools
 
@@ -554,9 +667,12 @@ If choosing Python.
 * GitHub Actions
 * GitLab CI
 
-## Goal
+---
 
-Run API tests automatically in pipelines.
+## 📚 Resources
+
+* https://www.jenkins.io/doc/
+* https://docs.github.com/en/actions
 
 ---
 
@@ -564,78 +680,231 @@ Run API tests automatically in pipelines.
 
 ---
 
-# 2️⃣1️⃣ Contract Testing
+# 2️⃣0️⃣ Contract Testing
+
+---
 
 ## Tools
 
 * Pact
 
-## Learn
+---
 
-Consumer-driven contract testing.
+## 📚 Resources
+
+* https://docs.pact.io/
 
 ---
 
-# 2️⃣2️⃣ Performance Testing APIs
+# 2️⃣1️⃣ Performance Testing APIs
+
+---
 
 ## Tools
 
 * JMeter
 * k6
 
-## Learn
+---
 
-* Load Testing
-* Stress Testing
-* Spike Testing
+## 📚 Resources
+
+* https://jmeter.apache.org/usermanual/index.html
+* https://k6.io/docs/
 
 ---
 
-# 2️⃣3️⃣ Security Testing Basics
+# 2️⃣2️⃣ Security Testing
+
+---
 
 ## Learn
 
 OWASP API Security Top 10
 
-### Topics
+---
 
-* Broken Authentication
-* Rate Limiting
-* Injection Attacks
-* Authorization Issues
+## 📚 Resources
+
+* https://owasp.org/API-Security/
+* https://portswigger.net/web-security/apis
 
 ---
 
-# 2️⃣4️⃣ GraphQL Testing
-
-## Learn
-
-* Queries
-* Mutations
-* Schema Validation
+# 2️⃣3️⃣ GraphQL Testing
 
 ---
 
-# 2️⃣5️⃣ SOAP API Testing
+## 📚 Resources
 
-Still asked in interviews.
-
-## Topics
-
-* WSDL
-* XML
-* SOAP Envelope
+* https://graphql.org/learn/
+* https://www.postman.com/graphql/
 
 ---
 
-# 2️⃣6️⃣ Microservices Testing
+# 2️⃣4️⃣ SOAP API Testing
 
-## Learn
+---
 
-* Service Communication
-* Distributed Systems
-* Kafka Basics
-* Event-driven Systems
+## 📚 Resources
+
+* https://www.soapui.org/
+* https://www.guru99.com/soapui-tutorial.html
+
+---
+
+# 🎯 Real World API Testing Case Study
+
+---
+
+# Case Study Website
+
+We will use:
+
+## Demo Website
+
+https://reqres.in/
+
+ReqRes is a fake REST API platform perfect for beginners.
+
+---
+
+# Example Scenario
+
+Assume we are testing:
+
+## User Login API
+
+Endpoint:
+
+```text
+POST https://reqres.in/api/login
+```
+
+---
+
+# Step 1 — Understand HTTP Method
+
+We are using:
+
+```text
+POST
+```
+
+Why?
+Because login creates an authenticated session/token.
+
+---
+
+# Step 2 — Understand Request Payload
+
+```json
+{
+  "email": "eve.holt@reqres.in",
+  "password": "cityslicka"
+}
+```
+
+Learn:
+
+* JSON structure
+* request body
+* validation
+
+---
+
+# Step 3 — Validate Status Code
+
+Expected:
+
+```text
+200 OK
+```
+
+Negative scenario:
+
+```text
+400 Bad Request
+```
+
+---
+
+# Step 4 — Validate Response Body
+
+Expected:
+
+```json
+{
+  "token": "QpwL5tke4Pnpja7X4"
+}
+```
+
+Validate:
+
+* token exists
+* response structure
+* response data type
+
+---
+
+# Step 5 — Negative Testing
+
+Send:
+
+```json
+{
+  "email": "eve.holt@reqres.in"
+}
+```
+
+Expected:
+
+```json
+{
+  "error": "Missing password"
+}
+```
+
+Learn:
+
+* negative testing
+* validation testing
+* error handling
+
+---
+
+# Step 6 — Authentication Understanding
+
+The token returned can be used for:
+
+* authenticated APIs
+* authorization headers
+
+Example:
+
+```text
+Authorization: Bearer token_here
+```
+
+---
+
+# Step 7 — Automation Perspective
+
+Automate using:
+
+* Postman
+* REST Assured
+* Python requests
+
+---
+
+# Step 8 — CI/CD Perspective
+
+Run tests automatically:
+
+* after deployment
+* during pull requests
+* nightly regression runs
 
 ---
 
@@ -645,96 +914,25 @@ Still asked in interviews.
 
 # Most Important Interview Topics
 
-## Must Master
-
 * HTTP Methods
 * Status Codes
 * Authentication
-* Postman
+* API Assertions
 * JSON Parsing
 * REST Principles
-* API Validations
+* API Chaining
 * SQL Validation
-* REST Assured / requests
-* Framework Concepts
+* Framework Design
 
 ---
 
-# Important Scenario Questions
-
-## Practice Questions
+# Scenario Questions
 
 * How would you test Login API?
 * Difference between PUT and PATCH?
-* How do you validate API responses?
-* How would you automate chained APIs?
-* How do you handle token expiration?
-* How do you validate database consistency?
-
----
-
-# 📚 Best Resources
-
----
-
-# Official Documentation
-
-* Postman Learning Center
-  https://learning.postman.com/
-
-* Swagger Documentation
-  https://swagger.io/docs/
-
-* REST Assured Documentation
-  https://rest-assured.io/
-
-* Pytest Documentation
-  https://docs.pytest.org/
-
-* OWASP API Security
-  https://owasp.org/API-Security/
-
----
-
-# Practice APIs
-
-* JSONPlaceholder
-  https://jsonplaceholder.typicode.com/
-
-* ReqRes
-  https://reqres.in/
-
-* PetStore Swagger
-  https://petstore.swagger.io/
-
-* GitHub API
-  https://docs.github.com/en/rest
-
-
----
-
-# 🛠 Recommended Tech Stack
-
-## Beginner
-
-* Postman
-* Swagger
-* Chrome DevTools
-
-## Intermediate
-
-* REST Assured
-* Python requests
-* SQL
-* Newman
-
-## Advanced
-
-* Jenkins
-* Docker
-* Pact
-* JMeter
-* Kafka
+* How would you validate API response?
+* How do you automate API chaining?
+* What validations will you perform on payment API?
 
 ---
 
@@ -742,23 +940,23 @@ Still asked in interviews.
 
 | API              | URL                                   |
 | ---------------- | ------------------------------------- |
-| JSONPlaceholder  | https://jsonplaceholder.typicode.com/ |
 | ReqRes           | https://reqres.in/                    |
+| JSONPlaceholder  | https://jsonplaceholder.typicode.com/ |
 | FakeStoreAPI     | https://fakestoreapi.com/             |
-| GitHub API       | https://docs.github.com/en/rest       |
 | PetStore Swagger | https://petstore.swagger.io/          |
+| GitHub API       | https://docs.github.com/en/rest       |
 
 ---
 
 # ❌ Common Mistakes Beginners Make
 
 1. Jumping directly into automation
-2. Memorizing tools instead of concepts
-3. Ignoring HTTP fundamentals
-4. Avoiding SQL
-5. Not practicing real APIs
-6. Learning scripts without understanding validations
-7. Ignoring debugging concepts
+2. Ignoring HTTP fundamentals
+3. Avoiding SQL
+4. Memorizing Postman
+5. Not learning validations properly
+6. Ignoring debugging
+7. Not practicing real APIs
 
 ---
 
@@ -767,22 +965,22 @@ Still asked in interviews.
 To master API Testing:
 
 * Learn concepts deeply
-* Practice every day
-* Use real public APIs
+* Practice consistently
+* Build projects
 * Learn debugging
 * Focus on validations
-* Build automation gradually
+* Understand backend systems
 
 API Testing is NOT just Postman.
 
-It is about understanding:
+It is understanding:
 
 * communication
-* validation
 * backend behavior
 * integrations
-* automation strategies
-* distributed systems
+* authentication
+* automation architecture
+* system reliability
 
 Once concepts are strong, tools become easy.
 
@@ -790,14 +988,14 @@ Once concepts are strong, tools become easy.
 
 # 🎯 Final Goal
 
-By following this roadmap, the student should be able to:
+By following this roadmap, student should be able to:
 
-* Perform Manual API Testing
+* Perform manual API testing
 * Design API test cases
 * Validate backend systems
-* Build API Automation frameworks
+* Build automation frameworks
 * Integrate tests into CI/CD
-* Crack QA/SDET interviews
+* Crack SDET/QA interviews
 * Work confidently in enterprise projects
 
 ---

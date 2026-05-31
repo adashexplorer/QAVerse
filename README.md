@@ -1,4 +1,4 @@
-🚀 Welcome to QA_Interview_Prep
+🚀 Welcome to QAVerse
 
 A comprehensive repository designed to help QA Engineers, Automation Testers, and SDET aspirants prepare for interviews through structured roadmaps, real-world concepts, hands-on examples, automation frameworks, and industry-focused learning resources.
 
